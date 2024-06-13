@@ -7,8 +7,9 @@ exports.getProjects = asyncHandler(async (req, res) => {
 })
 exports.addProjects = asyncHandler(async (req, res) => {
     await Projects.create(req.body)
-    res.json({ message: "add Projects success" })
+    res.json({ messgae: "add Project Success" })
 })
+
 exports.updateProjects = asyncHandler(async (req, res) => {
     const { userId } = req.params
     await Projects.findByIdAndUpdate(userId, req.body)
